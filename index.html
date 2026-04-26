@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Overdrive — Three Arc Self-Assessment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -32,7 +34,7 @@
 
   /* ── Logo ── */
   .brand { margin-bottom: 2.75rem; }
-  .brand-logo { display: block; width: 180px; height: auto; overflow: visible; }
+  .brand-logo { display: block; width: 210px; height: auto; overflow: visible; }
   .brand-sub { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-top: 5px; display: block; }
 
   h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: .75rem; }
@@ -110,7 +112,7 @@
     .wrap { padding: 2rem 1.1rem 4rem; }
     .wrap-wide { padding: 1.75rem 1.1rem 4rem; }
     .brand { margin-bottom: 2rem; }
-    .brand-logo { width: 140px !important; }
+    .brand-logo { width: 165px !important; }
     h1 { font-size: 26px; }
     .subtext { font-size: 14px; margin-bottom: 1.5rem; }
     .qcard { padding: 1.1rem; }
@@ -141,19 +143,26 @@
 <!-- shared logo snippet (defined once as a symbol, referenced 4×) -->
 <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- The horizontal speed-stripe mask: sits ~62% down the cap height,
-         matching the thin horizontal cut visible in the brand PDF -->
+    <!-- Stripe sits at ~57% down the OVERDRIVE cap height, matching brand mark -->
     <mask id="od-mask">
-      <rect width="300" height="52" fill="white"/>
-      <rect x="0" y="30" width="300" height="3.5" fill="black"/>
+      <rect width="340" height="58" fill="white"/>
+      <rect x="0" y="34" width="340" height="4" fill="black"/>
     </mask>
-    <symbol id="od-logo" viewBox="0 0 300 52">
-      <text x="1" y="46"
-        font-family="'Impact','Arial Narrow','Franklin Gothic Heavy','Arial Black',sans-serif"
-        font-weight="900" font-style="italic"
-        font-size="48" fill="#FF4D13"
-        letter-spacing="-2"
-        mask="url(#od-mask)">OVERDRIVE</text>
+    <symbol id="od-logo" viewBox="0 0 340 76">
+      <!-- pine labs wordmark above -->
+      <text x="3" y="14"
+        font-family="'Barlow Condensed','Helvetica Neue','Arial',sans-serif"
+        font-weight="400" font-style="normal"
+        font-size="13" fill="#f0efea"
+        letter-spacing="0.5">pine labs</text>
+      <!-- OVERDRIVE with speed stripe -->
+      <g mask="url(#od-mask)" transform="translate(0,18)">
+        <text x="1" y="52"
+          font-family="'Barlow Condensed','Impact','Franklin Gothic Heavy','Arial Black',sans-serif"
+          font-weight="800" font-style="italic"
+          font-size="54" fill="#FF4D13"
+          letter-spacing="-0.5">OVERDRIVE</text>
+      </g>
     </symbol>
   </defs>
 </svg>
